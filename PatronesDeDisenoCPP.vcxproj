@@ -123,7 +123,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Command.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="PatronesDeDisenoCPP.cpp" />
+    <ClCompile Include="Resource\Character.cpp" />
+    <ClCompile Include="Resource\Command.cpp" />
+    <ClCompile Include="Resource\InputHandler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="Include\Character.h" />
+    <ClInclude Include="Include\Command.h" />
+    <ClInclude Include="Include\InputHandler.h" />
+    <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PatronesDeDisenoCPP.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
