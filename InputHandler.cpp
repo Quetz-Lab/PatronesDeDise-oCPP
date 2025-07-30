@@ -25,3 +25,10 @@ Command* InputHandler::handleInput(char tecla)
     // Si no es una tecla mapeada, no devolvemos ningún comando
     return nullptr;
 }
+
+void InputHandler::remapearTecla(char telca, std::string accion)
+{
+    // Este método podría ser implementado para cambiar la asignación de teclas
+    // Por ahora, no se implementa ninguna lógica específica
+	std::cout << "Remapeando tecla '" << telca << "' a acción '" << accion << "' (no implementado)\n";
+}
