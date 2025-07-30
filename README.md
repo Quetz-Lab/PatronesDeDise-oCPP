@@ -78,5 +78,7 @@ Command: Sirve para hacer código limpio generando instancias a las que sean fá
 
 | +remapearTecla(char, string)      |
 
-+------------------+
+
+
+Para este caso decidí que el mensaje que debería dar al remapear sea "Remapeo no exitoso"
 

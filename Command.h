@@ -37,4 +37,13 @@ class CrouchCommand : public Command
 		character.Crouch();
 	}
 };
+class RemapCommand : public Command
+{
+public:
+	virtual void execute(Character& character) override
+	{
+		// This command could be used to remap keys, but for simplicity, we won't implement it here.
+		std::cout << "Remapeo no exitoso" << std::endl;
+	}
+};
 

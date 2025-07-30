@@ -10,21 +10,15 @@ private:
 	Command* botonW_;
 	Command* botonF_;
 	Command* botonI_;
+	Command* botonR_; // Botón para remapear teclas
 
 public:
 	InputHandler();
 	~InputHandler();
 	Command* handleInput(char tecla);
+	// Método para remapear teclas a acciones
+	void remapearTecla(char tecla, std::string accion);
 	
-	void remapearTecla(char telca, std::string accion)
-	{
-		if (keyMappings.count(tecla))
-			keyMappings[tecla]->execute();
-	}
-	void bindCommand(char tecla, std::unique_ptr<Command> command)
-	{
-		keyMappings[tecla] = std::move(command);
-	}
 
 };
 

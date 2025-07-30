@@ -13,6 +13,7 @@ int main()
 	std::cout << "Bienvenido al juego \n";
 	std::cout << "Aprieta una tecla para jugar\n";
 	std::cout << "Controles: 'w' = Saltar, 'f' = Disparar, 'i' = Agacharse\n";
+	std::cout << "Intenta remapear las teclas con 'r' + tecla + espacio + accion (jump, shoot, crouch)\n";
 	std::cout << "=================================\n";
 	//Update
 	while (true)
