@@ -3,9 +3,11 @@
 
 #include <iostream>
 #include "Character.h"
+#include "State.h"
 int main()
 {
 	char tecla;
+	State state;
     Character* player = new Character(20,20,10,10,10);
   
 	std::cout << "=================================\n";
@@ -15,6 +17,10 @@ int main()
 	//Update
 	while (true)
 	{
+		
+		std::cout << "Ingresa comando (w = saltar, f = atacar, x = salir): ";
+		std::cin >> tecla;
+
 		
 		std::cin >> tecla;
 		if (tecla == 'w')
