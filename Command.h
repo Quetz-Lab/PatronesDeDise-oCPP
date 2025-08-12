@@ -1,7 +1,8 @@
 #pragma once
+
 #include "Character.h"
 #include <iostream>
-
+#include "InputHandler.h"
 class Command
 {
 public:
@@ -43,7 +44,19 @@ public:
 	virtual void execute(Character& character) override
 	{
 		// This command could be used to remap keys, but for simplicity, we won't implement it here.
-		std::cout << "Remapeo no exitoso" << std::endl;
+		std::cout << "Elige la nueva tecla" << std::endl;
+		char newKey;
+		std::cin >> newKey;
+		std::cout << "Elige la accion (jump, shoot, crouch)" << std::endl;
+		std::string action;
+		std::cin >> action;
+		InputHandler inputHandler;
+
+		inputHandler.remapearTecla(newKey, action);
+		std::cout << "Tecla remapeada a: " << newKey << " para la accin: " << action << std::endl;
+
+
+
 	}
 };
 
