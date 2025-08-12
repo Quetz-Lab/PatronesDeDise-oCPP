@@ -1,4 +1,5 @@
-﻿Command: Sirve para hacer código limpio generando instancias a las que sean fáciles de acceder sin que tener que hacer un código largo en main, usando inputHandler.
+Command: Sirve para hacer código limpio generando instancias a las que sean fáciles de acceder sin que tener que hacer un código largo en main, usando inputHandler.
+
 
 
 
@@ -82,6 +83,7 @@
 
 Para este caso decidí que el mensaje que debería dar al remapear sea "Remapeo no exitoso"
 
+
 Una FSM es un método en el que se puede llamar un comando de manera más eficiente y directa a la par de que se puede elegir que estados pueden tener una función simultanea como saltar y atacar. Usar un enum es más eficiente y fácil de leer para un programa que tener una larga lista de bools.
 
 En este caso el inputHandler es quien se lleva la responsabilidad de cargar todo desde la clase de State al tener que estar checando que estados pueden estar en simultaneo y cuales no.
@@ -97,4 +99,3 @@ En este caso el inputHandler es quien se lleva la responsabilidad de cargar todo
 [ATTACKING]
   └── al terminar la animación de ataque ──► [IDLE]
       (el personaje está atacando y no puede saltar)
-

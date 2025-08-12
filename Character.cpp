@@ -24,6 +24,10 @@ void Character::Shoot()
 {
 	std::cout << "Disparando" << std::endl;
 }
+void Character::Crouch()
+{
+	std::cout << "Agachandose" << std::endl;
+}
 Character::~Character()
 {
 	std::cout << "Llamando Destructor" << std::endl;
