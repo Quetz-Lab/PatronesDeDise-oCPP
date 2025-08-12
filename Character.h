@@ -8,6 +8,7 @@ public:
 	~Character();
 	void Jump();
 	void Shoot();
+	void Crouch();
 
 	//Getters y Setters
 	float GetHealth();
