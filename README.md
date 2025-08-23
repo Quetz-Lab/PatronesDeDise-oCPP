@@ -105,3 +105,6 @@ En este caso el inputHandler es quien se lleva la responsabilidad de cargar todo
 
 <img width="934" height="1063" alt="UML (1)" src="https://github.com/user-attachments/assets/50d76334-3a8f-44b0-84c2-369f1d3818aa" />
 
+Mientras que observer lee de manera sincrónica el eventqueue los lee de manera a sincrona y diferida lo cual permite que sea más fácil leerlos y rápido evitando saturar el sistema.
+Así dando un código optimizado.
+
