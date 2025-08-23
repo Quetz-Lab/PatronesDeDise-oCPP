@@ -87,6 +87,7 @@ Para este caso decidí que el mensaje que debería dar al remapear sea "Remapeo 
 Una FSM es un método en el que se puede llamar un comando de manera más eficiente y directa a la par de que se puede elegir que estados pueden tener una función simultanea como saltar y atacar. Usar un enum es más eficiente y fácil de leer para un programa que tener una larga lista de bools.
 
 En este caso el inputHandler es quien se lleva la responsabilidad de cargar todo desde la clase de State al tener que estar checando que estados pueden estar en simultaneo y cuales no.
+<img width="934" height="1063" alt="UML (1)" src="https://github.com/user-attachments/assets/789c398a-4538-472b-83b3-6a1ad06686cf" />
 
 [IDLE]
   ├── al presionar "saltar" ──► [JUMPING]
