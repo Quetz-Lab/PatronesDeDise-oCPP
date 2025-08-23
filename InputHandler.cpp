@@ -6,7 +6,7 @@ InputHandler::InputHandler()
     botonW_ = new JumpCommand();
     botonF_ = new ShootCommand();
     botonI_ = new CrouchCommand();
-	botonR_ = new RemapCommand(); // Inicializamos el botón de remapeo a nullptr, no lo usamos en este ejemplo
+	botonR_ = new RemapCommand(); // Inicializamos el botï¿½n de remapeo a nullptr, no lo usamos en este ejemplo
 }
 
 InputHandler::~InputHandler()
@@ -15,7 +15,7 @@ InputHandler::~InputHandler()
     delete botonW_;
     delete botonF_;
     delete botonI_;
-	delete botonR_; // Liberamos el botón de remapeo
+	delete botonR_; // Liberamos el botï¿½n de remapeo
 }
 
 Command* InputHandler::handleInput(char tecla)
@@ -25,23 +25,27 @@ Command* InputHandler::handleInput(char tecla)
     if (tecla == 'i') return botonI_;
 	if (tecla == 'r') return botonR_; // Si se presiona 'r', devolvemos el comando de remapeo
 
-    // Si no es una tecla mapeada, no devolvemos ningún comando
+    // Si no es una tecla mapeada, no devolvemos ningun comando
     return nullptr;
 }
 
 void InputHandler::remapearTecla(char tecla, std::string accion)
 {
-    // Remapea la tecla a una acción específica
+    // Remapea la tecla a una acciï¿½n especï¿½fica
     if (accion == "jump") {
-        keyMappings[tecla] = std::unique_ptr<Command>(botonW_);
-    } else if (accion == "shoot") {
-        keyMappings[tecla] = std::unique_ptr<Command>(botonF_);
-    } else if (accion == "crouch") {
-        keyMappings[tecla] = std::unique_ptr<Command>(botonI_);
-    } else {
-        // Si la acción no es válida, podríamos lanzar una excepción o manejar el error
+        keyMappings[tecla] = std::make_unique<JumpCommand>();
+		std::cin >> tecla; // Consumir el espacio
+    }
+    else if (accion == "shoot") {
+        keyMappings[tecla] = std::make_unique<ShootCommand>();
+    }
+    else if (accion == "crouch") {
+        keyMappings[tecla] = std::make_unique<CrouchCommand>();
+
+    }
+	//Usamos make_unique para crear y asignar el comando en una sola linea
+	//Lo que hace make_unique es crear un objeto de tipo Command y devolver un puntero unico a ese objeto
+    else {
+        // Si la accion no es valida, podriamos lanzar una excepcin o manejar el error
 	}
 }
-
-
-

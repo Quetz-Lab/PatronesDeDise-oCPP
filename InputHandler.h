@@ -1,39 +1,27 @@
-#pragma once
-#include "State.h"
+
+#include "Command.h"
+#include <string>
+#include <map>
+#include <memory> //Para usar std::unique_ptr
+class Command; // Forward declaration
+//Una forward declaration de Command es necesaria para evitar dependencias circulares
 class InputHandler
 {
+private:
+	std::map<char, std::shared_ptr<Command>> keyMappings;
+	Command* botonW_;
+	Command* botonF_;
+	Command* botonI_;
+	Command* botonR_; // Boton para remapear teclas
+
 public:
 	InputHandler();
 	~InputHandler();
-	void HandleInput(State& state, char input)
-	{
-		switch (input)
-		{
-		case 'w':
-			state.m_CurrentState = JUMPING;
-			state.m_stateTimer = 0; // Reset timer for jumping state
-			break;
-		case 'f':
-			state.m_CurrentState = ATTACKING;
-			state.m_stateTimer = 0; // Reset timer for attacking state
-			break;
-		default:
-			state.m_CurrentState = IDLE;
-			state.m_stateTimer = 0; // Reset timer for idle state
-			break;
-		}
-	}
-	void UpdateState(State& state)
-	{
-		if (state.m_CurrentState == JUMPING || state.m_CurrentState == ATTACKING)
-		{
-			state.m_stateTimer++;
-			if (state.m_stateTimer > 10) // Example timer limit
-			{
-				state.m_CurrentState = IDLE; // Reset to idle after timer exceeds limit
-				state.m_stateTimer = 0;
-			}
-		}
-	}
+	Command* handleInput(char tecla);
+	// Metodo para remapear teclas a acciones
+	void remapearTecla(char tecla, std::string accion);
+	
+
+
 };
 
