@@ -127,12 +127,14 @@
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="PatronesDeDisenoCPP.cpp" />
+    <ClCompile Include="State.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="InputHandler.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="State.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="PatronesDeDisenoCPP.rc" />

@@ -1,4 +1,4 @@
-#pragma once
+
 #include "Command.h"
 #include <string>
 #include <map>
@@ -21,6 +21,7 @@ public:
 	// Metodo para remapear teclas a acciones
 	void remapearTecla(char tecla, std::string accion);
 	
+
 
 };
 
