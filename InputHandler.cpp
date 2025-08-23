@@ -7,6 +7,7 @@ InputHandler::InputHandler()
     botonF_ = new ShootCommand();
     botonI_ = new CrouchCommand();
 	botonR_ = new RemapCommand(); // Inicializamos el bot�n de remapeo a nullptr, no lo usamos en este ejemplo
+	botonV_ = new GetDamageDebug();
 }
 
 InputHandler::~InputHandler()
@@ -23,6 +24,7 @@ Command* InputHandler::handleInput(char tecla)
     if (tecla == 'w') return botonW_;
     if (tecla == 'f') return botonF_;
     if (tecla == 'i') return botonI_;
+    if (tecla == 'v') return botonV_;
 	if (tecla == 'r') return botonR_; // Si se presiona 'r', devolvemos el comando de remapeo
 
     // Si no es una tecla mapeada, no devolvemos ningun comando
@@ -41,6 +43,11 @@ void InputHandler::remapearTecla(char tecla, std::string accion)
     }
     else if (accion == "crouch") {
         keyMappings[tecla] = std::make_unique<CrouchCommand>();
+
+    }
+    else if (accion == "DebugDamage")
+    {
+		keyMappings[tecla] = std::make_unique<GetDamageDebug>();
 
     }
 	//Usamos make_unique para crear y asignar el comando en una sola linea

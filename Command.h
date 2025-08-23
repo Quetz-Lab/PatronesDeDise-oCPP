@@ -3,6 +3,7 @@
 #include "Character.h"
 #include <iostream>
 #include "InputHandler.h"
+class Observer; // Forward declaration to avoid circular dependency
 class Command
 {
 public:
@@ -57,6 +58,21 @@ public:
 
 
 
+	}
+};
+
+class GetDamageDebug : public Command
+{
+	public:
+	virtual void execute(Character& character) override
+	{
+		// Simulate the character taking damage
+		float currentHealth = character.GetHealth();
+		currentHealth -= 10; // Example damage value
+		if (currentHealth < 0) currentHealth = 0;
+		character.SetHealth(currentHealth);
+		std::cout << "Character received damage, new health: " << character.GetHealth() << std::endl;
+		character.GetDamage();
 	}
 };
 
