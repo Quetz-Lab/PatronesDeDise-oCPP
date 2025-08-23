@@ -1,11 +1,13 @@
 #include "Character.h"
-Character::Character(float health, float maxHealth, float speed, int damage, float jumpHeight)
+Character::Character(float health, float maxHealth, float speed, int damage, float jumpHeight, int NumObservers)
 {
 	_health = health;
 	_maxHealth = maxHealth;
 	_speed = speed;
 	_damage = damage;
 	_jumpheight = jumpHeight;
+	//Observers
+	m_numObservers = NumObservers;
 
 }
 Character::Character()
@@ -15,6 +17,8 @@ Character::Character()
 	_speed = 10;
 	_damage = 10;
 	_jumpheight = 10;
+	//Setear el numero de observers a 0
+	m_numObservers = 0;
 }
 void Character::Jump()
 {
@@ -27,6 +31,19 @@ void Character::Shoot()
 void Character::Crouch()
 {
 	std::cout << "Agachandose" << std::endl;
+}
+void Character::DebugGetDamage()
+{
+	std::cout << "Debug: Personaje recibe dano" << std::endl;
+}
+void Character::addObserver(Observer* observer)
+{
+	//Verificar que no se exceda el maximo de observers
+	if (m_numObservers < MaxObservers)
+	{
+		//Añadir el observer al array y aumentar el contador
+		observers[m_numObservers++] = observer;
+	}
 }
 Character::~Character()
 {
@@ -54,6 +71,8 @@ void Character::SetSpeed(float speed)
 
 int Character::GetDamage()
 {
+	//Notificar a los observers que el personaje ha recibido daño
+	Notify(Event::Character_Get_Damage);
 	return _damage;
 
 }
@@ -82,6 +101,16 @@ float Character::GetJumpHeight()
 void Character::SetJumpHeigth(float jumpHeight)
 {
 	_jumpheight = jumpHeight;
+}
+
+void Character::Notify(Event event)
+{
+	//Notificar a todos los observers registrados del evento
+	for (int i = 0; i < m_numObservers; ++i)
+	{
+		//Usar el metodo OnNotify de cada observer mediante array de punteros
+		observers[i]->OnNotify(*this, event);
+	}
 }
 
 

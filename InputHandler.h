@@ -13,6 +13,7 @@ private:
 	Command* botonF_;
 	Command* botonI_;
 	Command* botonR_; // Boton para remapear teclas
+	Command* botonV_;
 
 public:
 	InputHandler();

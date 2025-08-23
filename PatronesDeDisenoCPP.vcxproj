@@ -123,16 +123,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Achievements.cpp" />
+    <ClCompile Include="AudioSystem.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="InputHandler.cpp" />
+    <ClCompile Include="Observer.cpp" />
     <ClCompile Include="PatronesDeDisenoCPP.cpp" />
     <ClCompile Include="State.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Achievements.h" />
+    <ClInclude Include="AudioSystem.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="Observer.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="State.h" />
   </ItemGroup>
