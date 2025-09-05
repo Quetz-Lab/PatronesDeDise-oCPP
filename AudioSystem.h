@@ -1,11 +1,17 @@
 #pragma once
 #include "Observer.h"
+#include "EventQueue.h"
 class AudioSystem :
     public Observer
 {
     public:
-    AudioSystem() {}
-    ~AudioSystem() {}
+		static const int MAX_PENDING = 16;
+		SoundID pendingSounds[MAX_PENDING];
+		int pendingCount;
+        AudioSystem();
+        ~AudioSystem();
+		void RequestSound(SoundEvent event);
+		void processEvents();
    virtual void OnNotify(const Character& character, Event event) 
     {
        // Implementación específica para el sistema de audio
