@@ -127,6 +127,7 @@
     <ClCompile Include="AudioSystem.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Command.cpp" />
+    <ClCompile Include="EventQueue.cpp" />
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="Observer.cpp" />
     <ClCompile Include="PatronesDeDisenoCPP.cpp" />
@@ -137,6 +138,7 @@
     <ClInclude Include="AudioSystem.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Command.h" />
+    <ClInclude Include="EventQueue.h" />
     <ClInclude Include="InputHandler.h" />
     <ClInclude Include="Observer.h" />
     <ClInclude Include="resource.h" />
