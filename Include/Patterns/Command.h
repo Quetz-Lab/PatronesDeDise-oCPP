@@ -1,5 +1,20 @@
 #pragma once
 
+/**
+ * @file Command.h
+ * @brief Comandos del patrón Command que operan sobre `Character`.
+ *
+ * @details
+ * Define una interfaz abstracta `Command` y varias implementaciones concretas
+ * (saltar, disparar, agacharse, remapear y daño de depuración) que encapsulan
+ * acciones a ejecutar sobre un `Character`. Esto permite desacoplar la entrada
+ * de usuario de la lógica de juego.
+ *
+ * @note Requiere `Character.h` y `InputHandler.h`.
+ * @warning Algunas implementaciones realizan E/S de consola (bloqueante) y
+ * podrían no ser adecuadas para entornos en tiempo real.
+ */
+
 #include "Character.h"
 #include <iostream>
 #include "InputHandler.h"
