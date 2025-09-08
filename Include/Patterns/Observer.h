@@ -1,4 +1,18 @@
+/**
+ * @file Observer.h
+ * @brief Definici贸n del patr贸n Observer para notificar eventos de `Character`.
+ *
+ * @details
+ * Define la interfaz abstracta `Observer` que escucha cambios o sucesos
+ * de un `Character`, y el `enum class Event` con los tipos de eventos
+ * que pueden notificarse.
+ *
+ * @note Evita dependencias circulares declarando `class Character;` en vez
+ * de incluir directamente todo `Character.h`.
+ */
+
 #pragma once
+<<<<<<< Updated upstream
 /**
  * @file Observer.h
  * @brief Definici髇 del patr髇 Observer para notificar eventos de `Character`.
@@ -13,20 +27,57 @@
  * para garantizar la definici髇 completa si se necesita en la implementaci髇.
  */
 #include "Character.h"
+=======
+>>>>>>> Stashed changes
 
 class Character; // Forward declaration to avoid circular dependency
-class Observer
-{
-	public:
-		//Destructor virtual
-	virtual ~Observer() {}
-	//Metodo para notificar mediante el patron Observer 
-	virtual void OnNotify(const Character& character, Event event) = 0;
 
-};
-
+/**
+ * @enum Event
+ * @brief Enumeraci贸n de eventos que pueden ser notificados por el sistema Observer.
+ *
+ * @details
+ * Define los diferentes tipos de eventos que un `Character` puede generar
+ * y que los observadores pueden recibir para reaccionar apropiadamente.
+ */
 enum class Event
 {
-	Character_Get_Damage
+    Character_Get_Damage  ///< Evento disparado cuando el personaje recibe da帽o
+};
+
+/**
+ * @class Observer
+ * @brief Interfaz abstracta para el patr贸n Observer.
+ *
+ * @details
+ * Esta clase define la interfaz que deben implementar todos los observadores
+ * que deseen recibir notificaciones de eventos del `Character`. Implementa
+ * el patr贸n Observer cl谩sico donde el Subject (Character) notifica a m煤ltiples
+ * observadores cuando ocurren eventos de inter茅s.
+ *
+ * @note Esta es una clase abstracta pura que no puede ser instanciada directamente.
+ */
+class Observer
+{
+public:
+    /**
+     * @brief Destructor virtual.
+     * @details Asegura la destrucci贸n correcta de clases derivadas.
+     */
+    virtual ~Observer() {}
+    
+    /**
+     * @brief M茅todo de notificaci贸n del patr贸n Observer.
+     * @param character Referencia constante al personaje que gener贸 el evento.
+     * @param event Tipo de evento que ocurri贸.
+     * 
+     * @details
+     * Este m茅todo es llamado autom谩ticamente por el `Character` cuando ocurre
+     * un evento. Las clases derivadas deben implementar este m茅todo para
+     * definir c贸mo reaccionar a cada tipo de evento.
+     * 
+     * @note M茅todo puramente virtual que debe ser implementado por todas las clases derivadas.
+     */
+    virtual void OnNotify(const Character& character, Event event) = 0;
 };
 
