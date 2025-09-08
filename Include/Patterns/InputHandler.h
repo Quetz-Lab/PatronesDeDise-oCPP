@@ -1,4 +1,17 @@
-
+/**
+ * @file InputHandler.h
+ * @brief Mapeo de teclas a comandos y despacho de entradas.
+ *
+ * @details
+ * `InputHandler` encapsula la asociación de teclas con objetos `Command`
+ * (patrón Command) y expone utilidades para manejar la entrada del usuario y
+ * remapear controles en tiempo de ejecución.
+ *
+ * @note Este archivo incluye `Command.h` y usa `std::map` para los mapeos.
+ * @warning La clase mezcla punteros inteligentes en `keyMappings` con punteros
+ * crudos para botones dedicados (`botonW_`, `botonF_`, etc.). Revisa la
+ * propiedad de memoria y el ciclo de vida para evitar fugas o dobles liberaciones.
+ */
 #include "Command.h"
 #include <string>
 #include <map>

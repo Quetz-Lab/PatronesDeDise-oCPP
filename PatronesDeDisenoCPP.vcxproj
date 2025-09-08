@@ -123,7 +123,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Achievements.cpp" />
     <ClCompile Include="AudioSystem.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Command.cpp" />
@@ -134,15 +133,15 @@
     <ClCompile Include="State.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Achievements.h" />
-    <ClInclude Include="AudioSystem.h" />
-    <ClInclude Include="Character.h" />
-    <ClInclude Include="Command.h" />
-    <ClInclude Include="EventQueue.h" />
-    <ClInclude Include="InputHandler.h" />
-    <ClInclude Include="Observer.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="State.h" />
+    <ClInclude Include="Include\Core\Character.h" />
+    <ClInclude Include="Include\Patterns\Command.h" />
+    <ClInclude Include="Include\Patterns\EventQueue.h" />
+    <ClInclude Include="Include\Patterns\InputHandler.h" />
+    <ClInclude Include="Include\Patterns\Observer.h" />
+    <ClInclude Include="Include\Patterns\State.h" />
+    <ClInclude Include="Include\resource.h" />
+    <ClInclude Include="Include\Systems\Achievements.h" />
+    <ClInclude Include="Include\Systems\AudioSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="PatronesDeDisenoCPP.rc" />
