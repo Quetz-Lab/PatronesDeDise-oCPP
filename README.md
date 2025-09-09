@@ -20,8 +20,8 @@ Un portafolio completo que demuestra la implementación práctica de patrones de
 
 1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/tu-usuario/PatronesDeDisenoCPP.git
-   cd PatronesDeDisenoCPP
+   https://github.com/Quetz-Lab/PatronesDeDise-oCPP
+   cd PatronesDeDise-oCPP
    ```
 
 2. **Abrir en Visual Studio**
