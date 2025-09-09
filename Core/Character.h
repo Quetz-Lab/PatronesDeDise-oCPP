@@ -76,7 +76,7 @@ public:
 // Getters y Setters
 // ===========================
 
-	float GetHealth();
+	/*float GetHealth();
 	void SetHealth(float health);
 	float GetSpeed();
 	void SetSpeed(float speed);
@@ -86,7 +86,7 @@ public:
 	void SetMaxHealth(float maxHealth);
 	float GetJumpHeight();
 	void SetJumpHeigth(float jumpHeight);
-	int GetNumObservers(int NumObservers);
+	int GetNumObservers(int NumObservers);*/
 	
 
     // ===========================
