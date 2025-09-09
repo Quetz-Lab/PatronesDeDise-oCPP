@@ -15,8 +15,8 @@
 
 #include <iostream>
 
-#include "EventQueue.h"
-#include "Observer.h"
+#include "../Patterns/EventQueue.h"
+#include "../Patterns/Observer.h"
 
 /**
  * @class AudioSystem

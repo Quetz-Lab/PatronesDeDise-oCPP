@@ -123,28 +123,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AudioSystem.cpp" />
-    <ClCompile Include="Character.cpp" />
-    <ClCompile Include="Command.cpp" />
-    <ClCompile Include="EventQueue.cpp" />
-    <ClCompile Include="InputHandler.cpp" />
-    <ClCompile Include="Observer.cpp" />
-    <ClCompile Include="PatronesDeDisenoCPP.cpp" />
-    <ClCompile Include="State.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Include\Core\Character.h" />
-    <ClInclude Include="Include\Patterns\Command.h" />
-    <ClInclude Include="Include\Patterns\EventQueue.h" />
-    <ClInclude Include="Include\Patterns\InputHandler.h" />
-    <ClInclude Include="Include\Patterns\Observer.h" />
-    <ClInclude Include="Include\Patterns\State.h" />
-    <ClInclude Include="Include\resource.h" />
-    <ClInclude Include="Include\Systems\Achievements.h" />
-    <ClInclude Include="Include\Systems\AudioSystem.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="PatronesDeDisenoCPP.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\Character.cpp" />
+    <ClCompile Include="PatronesDeDisenoCPP.cpp" />
+    <ClCompile Include="Patterns\Command.cpp" />
+    <ClCompile Include="Patterns\EventQueue.cpp" />
+    <ClCompile Include="Patterns\InputHandler.cpp" />
+    <ClCompile Include="Patterns\Observer.cpp" />
+    <ClCompile Include="Patterns\State.cpp" />
+    <ClCompile Include="Systems\Achievements.cpp" />
+    <ClCompile Include="Systems\AudioSystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\Character.h" />
+    <ClInclude Include="Patterns\Command.h" />
+    <ClInclude Include="Patterns\EventQueue.h" />
+    <ClInclude Include="Patterns\InputHandler.h" />
+    <ClInclude Include="Patterns\Observer.h" />
+    <ClInclude Include="Patterns\State.h" />
+    <ClInclude Include="Systems\Achievements.h" />
+    <ClInclude Include="Systems\AudioSystem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,18 +1,8 @@
-/**
- * @file Observer.h
- * @brief Definici√≥n del patr√≥n Observer para notificar eventos de `Character`.
- *
- * @details
- * Define la interfaz abstracta `Observer` que escucha cambios o sucesos
- * de un `Character`, y el `enum class Event` con los tipos de eventos
- * que pueden notificarse.
- *
- * @note Evita dependencias circulares declarando `class Character;` en vez
- * de incluir directamente todo `Character.h`.
- */
+
+ 
 
 #pragma once
-<<<<<<< Updated upstream
+
 /**
  * @file Observer.h
  * @brief DefiniciÛn del patrÛn Observer para notificar eventos de `Character`.
@@ -26,9 +16,8 @@
  * de incluir directamente todo `Character.h`. AquÌ, sin embargo, se incluye
  * para garantizar la definiciÛn completa si se necesita en la implementaciÛn.
  */
-#include "Character.h"
-=======
->>>>>>> Stashed changes
+#include "../Core/Character.h"
+
 
 class Character; // Forward declaration to avoid circular dependency
 

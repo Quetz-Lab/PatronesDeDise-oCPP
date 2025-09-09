@@ -1,4 +1,4 @@
-#include "Character.h"
+#include "../Core/Character.h"
 Character::Character(float health, float maxHealth, float speed, int damage, float jumpHeight, int NumObservers)
 {
 	_health = health;

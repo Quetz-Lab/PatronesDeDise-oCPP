@@ -17,10 +17,11 @@
 
 #include <iostream>
 
-#include "Character.h"
-#include "InputHandler.h"
+#include "../Core/Character.h"
+#include "../Patterns/InputHandler.h"
 
 class Observer; // Forward declaration to avoid circular dependency
+
 
 /**
  * @class Command
@@ -156,7 +157,6 @@ public:
         std::string action;
         std::cin >> action;
         InputHandler inputHandler;
-
         inputHandler.remapearTecla(newKey, action);
         std::cout << "Tecla remapeada a: " << newKey << " para la acción: " << action << std::endl;
     }

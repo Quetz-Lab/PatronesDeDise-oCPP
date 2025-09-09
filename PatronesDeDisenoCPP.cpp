@@ -3,11 +3,11 @@
 
 #include <iostream>
 
-#include "Achievements.h"
-#include "AudioSystem.h"
-#include "Character.h"
-#include "EventQueue.h"
-#include "State.h"
+#include "Systems/Achievements.h"
+#include "Systems/AudioSystem.h"
+#include "Core/Character.h"
+#include "Patterns/EventQueue.h"
+#include "Patterns/State.h"
 
 int main()
 {

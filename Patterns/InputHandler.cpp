@@ -1,4 +1,4 @@
-#include "InputHandler.h"
+#include "../Patterns/InputHandler.h"
 
 InputHandler::InputHandler()
 {
@@ -31,28 +31,32 @@ Command* InputHandler::handleInput(char tecla)
     return nullptr;
 }
 
-void InputHandler::remapearTecla(char tecla, std::string accion)
+void InputHandler::remapearTecla(char tecla, const std::string& accion) 
 {
     // Remapea la tecla a una acci�n espec�fica
-    if (accion == "jump") {
+    if (accion == "jump")
+    {
         keyMappings[tecla] = std::make_unique<JumpCommand>();
-		std::cin >> tecla; // Consumir el espacio
+        std::cin >> tecla;  // Consumir el espacio
     }
-    else if (accion == "shoot") {
+    else if (accion == "shoot")
+    {
         keyMappings[tecla] = std::make_unique<ShootCommand>();
     }
-    else if (accion == "crouch") {
+    else if (accion == "crouch")
+    {
         keyMappings[tecla] = std::make_unique<CrouchCommand>();
-
     }
     else if (accion == "DebugDamage")
     {
-		keyMappings[tecla] = std::make_unique<GetDamageDebug>();
-
+        keyMappings[tecla] = std::make_unique<GetDamageDebug>();
     }
-	//Usamos make_unique para crear y asignar el comando en una sola linea
-	//Lo que hace make_unique es crear un objeto de tipo Command y devolver un puntero unico a ese objeto
-    else {
+    // Usamos make_unique para crear y asignar el comando en una sola linea
+    // Lo que hace make_unique es crear un objeto de tipo Command y devolver un puntero unico a ese
+    // objeto
+    else
+    {
         // Si la accion no es valida, podriamos lanzar una excepcin o manejar el error
-	}
+    }
 }
+
