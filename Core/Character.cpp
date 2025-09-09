@@ -100,8 +100,9 @@ float Character::GetJumpHeight()
 
 void Character::SetJumpHeigth(float jumpHeight)
 {
-	_jumpheight = jumpHeight;
-}
+	_jumpheight = jumpHeight; }
+
+int Character::GetNumObservers(int NumObservers) { return 0; }
 
 void Character::Notify(Event event)
 {
