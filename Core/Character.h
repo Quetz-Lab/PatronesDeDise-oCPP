@@ -16,6 +16,25 @@
 
 class Character
 {
+  private:
+    static const int MaxObservers = 10;
+    Observer* observers[MaxObservers];
+    int m_numObservers;
+
+    // Estadísticas del personaje
+    float _health;
+    float _speed;
+    int _damage;
+    float _maxHealth;
+    float _jumpheight;
+
+    /**
+     * @brief Notifica a todos los observadores registrados.
+     * @param event Evento a notificar.
+     */
+    void Notify(Event event);
+
+
 public:
     /**
      * @brief Constructor completo.
@@ -186,22 +205,7 @@ public:
     int GetNumObservers(int NumObservers);
 
 
-private:
-    static const int MaxObservers = 10;
-    Observer* observers[MaxObservers];
-    int m_numObservers;
-    
-    // Estadísticas del personaje
-    float _health;
-    float _speed;
-    int _damage;
-    float _maxHealth;
-    float _jumpheight;
-    
-    /**
-     * @brief Notifica a todos los observadores registrados.
-     * @param event Evento a notificar.
-     */
-    void Notify(Event event);
+
+        
 };
 

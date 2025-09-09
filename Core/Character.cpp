@@ -8,7 +8,7 @@ Character::Character(float health, float maxHealth, float speed, int damage, flo
 	_jumpheight = jumpHeight;
 	//Observers
 	m_numObservers = NumObservers;
-
+    observers[0] = 0;
 }
 Character::Character()
 {
@@ -19,6 +19,7 @@ Character::Character()
 	_jumpheight = 10;
 	//Setear el numero de observers a 0
 	m_numObservers = 0;
+    observers[0] = 0;
 }
 void Character::Jump()
 {
@@ -100,7 +101,11 @@ float Character::GetJumpHeight()
 
 void Character::SetJumpHeigth(float jumpHeight)
 {
-	_jumpheight = jumpHeight;
+	_jumpheight = jumpHeight; }
+
+int Character::GetNumObservers(int NumObservers) 
+{ 
+	return 0; 
 }
 
 void Character::Notify(Event event)
